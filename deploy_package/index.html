@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>梁春华 · 9年品牌人 | Personal Brand Site</title>
+<meta name="description" content="9年品牌市场经验,深度参与3个品牌从0到1的品牌资产构建,擅长品牌叙事与整合营销操盘。">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ========== Reset & Base ========== */
+*,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+body {
+  font-family: "Noto Serif SC", "Songti SC", "Source Han Serif SC", serif;
+  background: #FAF7F2;
+  color: #2C2825;
+  line-height: 1.7;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; height: auto; }
+a { color: inherit; text-decoration: none; }
+
+/* ========== Color System ========== */
+:root {
+  --bg-cream: #FAF7F2;
+  --bg-warm: #F2EDE4;
+  --bg-clay: #E8DDC9;
+  --bg-deep: #2C2825;
+  --bg-coffee: #4A3F36;
+  --text-primary: #2C2825;
+  --text-secondary: #6B5E50;
+  --text-muted: #9B8E7E;
+  --accent-rust: #B36A4F;
+  --accent-gold: #A88A5C;
+  --line: #D4C9B0;
+  --line-light: #E8DDC9;
+}
+
+/* ========== Typography ========== */
+.serif-en { font-family: "Cormorant Garamond", serif; }
+.sans-en { font-family: "Inter", sans-serif; letter-spacing: 0.02em; }
+.sans-cn { font-family: "Noto Sans SC", sans-serif; }
+
+h1, h2, h3 { font-weight: 500; line-height: 1.3; }
+.tag-en {
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* ========== Layout ========== */
+.container { max-width: 1280px; margin: 0 auto; padding: 0 48px; }
+.container-narrow { max-width: 880px; margin: 0 auto; padding: 0 48px; }
+section { padding: 120px 0; position: relative; }
+
+/* ========== Navigation ========== */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  padding: 20px 48px;
+  display: flex; justify-content: space-between; align-items: center;
+  z-index: 100;
+  mix-blend-mode: difference;
+  color: #fff;
+  pointer-events: none;
+}
+.nav.scrolled { mix-blend-mode: normal; color: var(--text-primary); }
+.nav-brand { font-family: "Cormorant Garamond", serif; font-size: 22px; font-weight: 500; letter-spacing: 0.15em; pointer-events: auto; }
+.nav-links { display: flex; gap: 40px; pointer-events: auto; }
+.nav-links a {
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  position: relative;
+  padding: 4px 0;
+}
+.nav-links a::after {
+  content: ''; position: absolute; bottom: 0; left: 0;
+  width: 0; height: 1px; background: currentColor;
+  transition: width 0.4s ease;
+}
+.nav-links a:hover::after { width: 100%; }
+
+/* ========== Hero / Section 1 ========== */
+.hero {
+  height: 100vh;
+  min-height: 720px;
+  position: relative;
+  display: flex; align-items: center;
+  overflow: hidden;
+  padding: 0;
+  background: var(--bg-deep);
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background-image: url('images/hero-portrait.jpg');
+  background-size: cover;
+  background-position: center 30%;
+  opacity: 0.85;
+}
+.hero-bg::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(90deg,
+    rgba(20,15,10,0.6) 0%,
+    rgba(20,15,10,0.2) 40%,
+    rgba(20,15,10,0.0) 60%,
+    rgba(20,15,10,0.0) 100%);
+}
+.hero-content {
+  position: relative; z-index: 2;
+  padding: 0 80px;
+  max-width: 1280px; margin: 0 auto; width: 100%;
+  color: #FAF7F2;
+}
+.hero-eyebrow {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  opacity: 0.8;
+}
+.hero-eyebrow::before {
+  content: ''; display: inline-block;
+  width: 32px; height: 1px; background: currentColor;
+  vertical-align: middle; margin-right: 16px;
+}
+.hero-title {
+  font-family: "Noto Serif SC", serif;
+  font-size: clamp(40px, 7vw, 88px);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 32px;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+.hero-title-en {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 300;
+  margin-bottom: 48px;
+  opacity: 0.9;
+}
+.hero-meta {
+  font-family: "Noto Serif SC", serif;
+  font-size: 17px;
+  line-height: 2;
+  max-width: 480px;
+  font-weight: 300;
+  opacity: 0.85;
+  margin-bottom: 40px;
+}
+.hero-scroll {
+  position: absolute; bottom: 48px; left: 50%;
+  transform: translateX(-50%);
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(250,247,242,0.7);
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
+}
+.hero-scroll::after {
+  content: ''; width: 1px; height: 32px; background: currentColor;
+  animation: scroll-pulse 2s ease-in-out infinite;
+}
+@keyframes scroll-pulse {
+  0%, 100% { opacity: 0.4; transform: scaleY(0.7); }
+  50% { opacity: 1; transform: scaleY(1); }
+}
+
+/* ========== Section Headers ========== */
+.section-header {
+  margin-bottom: 80px;
+  display: flex; align-items: baseline;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.section-num {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 24px;
+  color: var(--accent-rust);
+  font-weight: 400;
+}
+.section-title {
+  font-family: "Noto Serif SC", serif;
+  font-size: clamp(32px, 4.5vw, 52px);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+.section-title-en {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 22px;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+.section-divider {
+  width: 60px; height: 1px;
+  background: var(--accent-rust);
+  margin-bottom: 24px;
+}
+
+/* ========== About / Section 2 ========== */
+.about { background: var(--bg-cream); padding-top: 140px; padding-bottom: 140px; }
+.about-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 100px; align-items: center;
+}
+.about-image-block {
+  position: relative;
+}
+.about-image-main {
+  aspect-ratio: 3/4;
+  background-image: url('images/about-portrait.jpg');
+  background-size: cover; background-position: center;
+  position: relative;
+}
+.about-image-main::after {
+  content: ''; position: absolute;
+  bottom: -40px; right: -40px;
+  width: 60%; aspect-ratio: 3/4;
+  background-image: url('images/portrait-bw2.jpg');
+  background-size: cover; background-position: center;
+  border: 8px solid var(--bg-cream);
+}
+.about-text { padding-right: 20px; }
+.about-quote {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 28px;
+  line-height: 1.5;
+  color: var(--accent-rust);
+  margin-bottom: 32px;
+  font-weight: 400;
+}
+.about-paragraph {
+  font-size: 17px;
+  line-height: 2;
+  margin-bottom: 24px;
+  color: var(--text-primary);
+  font-weight: 400;
+}
+.about-paragraph strong {
+  font-weight: 600;
+  color: var(--accent-rust);
+}
+.about-signature {
+  margin-top: 56px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+  display: flex; justify-content: space-between; align-items: baseline;
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+}
+.about-signature-name { font-size: 24px; font-weight: 500; }
+.about-signature-loc { font-size: 14px; color: var(--text-muted); letter-spacing: 0.2em; text-transform: uppercase; font-family: "Inter", sans-serif; font-style: normal; }
+
+/* ========== Capabilities / Section 3 ========== */
+.capabilities {
+  background: var(--bg-warm);
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+.cap-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+.cap-card {
+  background: var(--bg-warm);
+  padding: 56px 48px;
+  display: flex; flex-direction: column;
+  min-height: 320px;
+  transition: background 0.4s ease;
+}
+.cap-card:hover { background: var(--bg-cream); }
+.cap-num {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 28px;
+  color: var(--accent-rust);
+  margin-bottom: 24px;
+  font-weight: 400;
+}
+.cap-title {
+  font-family: "Noto Serif SC", serif;
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  letter-spacing: 0.02em;
+}
+.cap-title-en {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 16px;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+  font-weight: 400;
+}
+.cap-desc {
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+  flex: 1;
+}
+.cap-evidence {
+  padding-top: 20px;
+  border-top: 1px solid var(--line-light);
+  font-size: 13px;
+  color: var(--text-muted);
+  font-family: "Inter", sans-serif;
+  letter-spacing: 0.05em;
+}
+
+/* ========== Works / Section 4 ========== */
+.works { background: var(--bg-cream); padding-top: 140px; padding-bottom: 0; }
+
+.work-block {
+  margin-bottom: 0;
+  padding-bottom: 140px;
+  position: relative;
+}
+.work-header {
+  display: flex; justify-content: space-between; align-items: flex-end;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 64px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.work-meta-left { display: flex; align-items: baseline; gap: 32px; flex-wrap: wrap; }
+.work-num {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 32px;
+  color: var(--accent-rust);
+  font-weight: 400;
+}
+.work-brand-logo {
+  height: 32px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  opacity: 0.9;
+}
+.work-year {
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+.work-tag {
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  color: var(--accent-rust);
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border: 1px solid var(--accent-rust);
+  border-radius: 100px;
+}
+
+.work-title {
+  font-family: "Noto Serif SC", serif;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 500;
+  line-height: 1.25;
+  margin-bottom: 24px;
+  letter-spacing: 0.02em;
+}
+.work-subtitle {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 22px;
+  color: var(--text-secondary);
+  margin-bottom: 48px;
+  font-weight: 400;
+}
+
+.work-content { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; margin-bottom: 64px; }
+.work-content.reverse { grid-template-columns: 1fr 1fr; }
+.work-content.reverse .work-text { order: 2; }
+.work-content.reverse .work-image { order: 1; }
+.work-text { padding-top: 12px; }
+.work-text p {
+  font-size: 16px;
+  line-height: 2;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+.work-text p strong { color: var(--accent-rust); font-weight: 600; }
+.work-quote-block {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 22px;
+  line-height: 1.6;
+  color: var(--accent-rust);
+  border-left: 2px solid var(--accent-rust);
+  padding: 8px 0 8px 28px;
+  margin: 32px 0;
+  font-weight: 400;
+}
+
+.work-image img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+.work-image-grid {
+  display: grid; gap: 16px;
+}
+.work-image-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+.work-image-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+.work-image-grid img {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+}
+.work-image-full { width: 100%; }
+.work-image-full img { width: 100%; aspect-ratio: 16/7; object-fit: cover; }
+
+.work-impact {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  padding: 56px 48px;
+  background: var(--bg-warm);
+  margin-top: 64px;
+}
+.impact-item { text-align: left; }
+.impact-num {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 56px;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 12px;
+  color: var(--accent-rust);
+  letter-spacing: -0.02em;
+}
+.impact-label {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+.impact-tag {
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.work-divider {
+  width: 100%;
+  height: 1px;
+  background: var(--line);
+  margin-bottom: 0;
+}
+
+/* moodytiger 占位区(无素材)的特殊设计 */
+.work-placeholder {
+  background: linear-gradient(135deg, #2C2825 0%, #4A3F36 100%);
+  color: #FAF7F2;
+  padding: 80px 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.work-placeholder-text {
+  font-family: "Noto Serif SC", serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+}
+.work-placeholder-en {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 1;
+  color: rgba(250,247,242,0.4);
+  letter-spacing: -0.02em;
+}
+
+/* ========== Timeline / Section 5 ========== */
+.timeline-section {
+  background: var(--bg-deep);
+  color: #FAF7F2;
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+.timeline-section .section-title { color: #FAF7F2; }
+.timeline-section .section-title-en { color: rgba(250,247,242,0.5); }
+.timeline-section .section-num { color: #C9A788; }
+
+.timeline {
+  position: relative;
+  margin-top: 80px;
+  padding-left: 60px;
+}
+.timeline::before {
+  content: ''; position: absolute;
+  left: 12px; top: 12px; bottom: 12px;
+  width: 1px;
+  background: rgba(250,247,242,0.2);
+}
+.timeline-item {
+  position: relative;
+  padding-bottom: 64px;
+}
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -53px; top: 8px;
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  background: var(--bg-deep);
+  border: 2px solid #C9A788;
+}
+.timeline-item.current::before {
+  background: #C9A788;
+  box-shadow: 0 0 0 4px rgba(201, 167, 136, 0.2);
+}
+.timeline-date {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 16px;
+  color: #C9A788;
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+.timeline-company {
+  font-family: "Noto Serif SC", serif;
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 4px;
+  letter-spacing: 0.02em;
+}
+.timeline-role {
+  font-size: 14px;
+  color: rgba(250,247,242,0.6);
+  margin-bottom: 16px;
+  font-family: "Inter", sans-serif;
+  letter-spacing: 0.05em;
+}
+.timeline-desc {
+  font-size: 15px;
+  line-height: 1.9;
+  color: rgba(250,247,242,0.85);
+  max-width: 680px;
+}
+.timeline-tags {
+  margin-top: 16px;
+  display: flex; gap: 12px; flex-wrap: wrap;
+}
+.timeline-tag {
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  color: rgba(250,247,242,0.6);
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border: 1px solid rgba(250,247,242,0.2);
+  border-radius: 100px;
+}
+
+/* ========== Awards / Section 6 ========== */
+.awards { background: var(--bg-cream); padding-top: 140px; padding-bottom: 140px; }
+.awards-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  margin-top: 24px;
+}
+.award-card {
+  background: var(--bg-cream);
+  padding: 48px 32px;
+  text-align: left;
+  transition: background 0.3s ease;
+}
+.award-card:hover { background: var(--bg-warm); }
+.award-year {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 18px;
+  color: var(--accent-rust);
+  margin-bottom: 16px;
+  font-weight: 400;
+}
+.award-title {
+  font-family: "Noto Serif SC", serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+.award-org {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-family: "Inter", sans-serif;
+  letter-spacing: 0.05em;
+}
+
+/* ========== Philosophy / Section 7 ========== */
+.philosophy {
+  background: var(--bg-warm);
+  padding-top: 140px;
+  padding-bottom: 140px;
+  position: relative;
+}
+.philosophy-content {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+.philosophy-mark {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 120px;
+  line-height: 1;
+  color: var(--accent-rust);
+  opacity: 0.3;
+  margin-bottom: 32px;
+}
+.philosophy-text {
+  font-family: "Noto Serif SC", serif;
+  font-size: 22px;
+  line-height: 2;
+  font-weight: 400;
+  margin-bottom: 32px;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+.philosophy-text strong { color: var(--accent-rust); font-weight: 600; }
+.philosophy-divider { width: 40px; height: 1px; background: var(--accent-rust); margin: 48px auto; }
+.philosophy-en {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 18px;
+  color: var(--text-muted);
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+/* ========== Contact / Section 8 ========== */
+.contact {
+  background: var(--bg-deep);
+  color: #FAF7F2;
+  padding: 140px 0 80px;
+  text-align: left;
+}
+.contact .section-num { color: #C9A788; }
+.contact-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  margin-top: 80px;
+  align-items: start;
+}
+.contact-headline {
+  font-family: "Noto Serif SC", serif;
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 32px;
+  letter-spacing: 0.02em;
+}
+.contact-headline-en {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 22px;
+  color: rgba(250,247,242,0.5);
+  margin-bottom: 48px;
+  font-weight: 400;
+}
+.contact-info { font-family: "Inter", sans-serif; }
+.contact-item {
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(250,247,242,0.15);
+}
+.contact-label {
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(250,247,242,0.5);
+  margin-bottom: 8px;
+  display: block;
+}
+.contact-value {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: #FAF7F2;
+}
+.contact-value a { transition: color 0.3s; }
+.contact-value a:hover { color: #C9A788; }
+.contact-cta {
+  margin-top: 48px;
+  display: inline-flex; align-items: center; gap: 16px;
+  padding: 16px 32px;
+  background: #C9A788;
+  color: var(--bg-deep);
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.contact-cta:hover { background: #FAF7F2; transform: translateY(-2px); }
+
+.footer {
+  margin-top: 80px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(250,247,242,0.15);
+  display: flex; justify-content: space-between; align-items: center;
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(250,247,242,0.4);
+}
+
+/* ========== Animations ========== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 968px) {
+  section { padding: 80px 0; }
+  .container, .container-narrow { padding: 0 24px; }
+  .hero-content { padding: 0 32px; }
+  .hero-title {
+    font-size: clamp(36px, 9vw, 56px);
+    white-space: normal;
+    line-height: 1.25;
+  }
+  .hero-title-en { font-size: 20px; }
+  .hero-meta { font-size: 14px; }
+  .nav { padding: 16px 24px; }
+  .nav-links { gap: 24px; }
+  .nav-links a { font-size: 11px; }
+  
+  .about-grid { grid-template-columns: 1fr; gap: 60px; }
+  .about-image-main::after { width: 50%; right: -20px; bottom: -20px; }
+  
+  .cap-grid { grid-template-columns: 1fr; }
+  .cap-card { padding: 40px 28px; min-height: 240px; }
+  
+  .work-content,
+  .work-content.reverse {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .work-content.reverse .work-text { order: 1; }
+  .work-content.reverse .work-image { order: 2; }
+  .work-image-grid.cols-3 { grid-template-columns: 1fr 1fr; }
+  .work-impact { grid-template-columns: repeat(2, 1fr); padding: 32px 24px; }
+  .impact-num { font-size: 40px; }
+  .work-placeholder { grid-template-columns: 1fr; padding: 48px 28px; gap: 32px; }
+  .work-placeholder-text { font-size: 19px; line-height: 1.7; }
+  .work-placeholder-en { font-size: 36px; }
+  
+  .awards-grid { grid-template-columns: 1fr; }
+  
+  .philosophy-text { font-size: 18px; }
+  .philosophy-mark { font-size: 80px; }
+  
+  .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+  .footer { flex-direction: column; gap: 16px; text-align: center; }
+  
+  .timeline { padding-left: 32px; }
+  .timeline-item::before { left: -25px; }
+  
+  .nav-links { display: none; }
+}
+
+/* ========== Print ========== */
+@media print {
+  .nav, .hero-scroll { display: none; }
+  section { page-break-inside: avoid; padding: 40px 0; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-brand">Liang Chunhua · 梁春华</div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#capabilities">Capabilities</a>
+    <a href="#works">Works</a>
+    <a href="#timeline">Journey</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- ============ Section 1: HERO ============ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Personal Brand · 2026</div>
+    <h1 class="hero-title">9年品牌人<br>相信品牌的力量<br>来自时间的沉淀</h1>
+    <div class="hero-title-en">A brand builder who believes in the power of patience.</div>
+    <div class="hero-meta">
+      梁春华 / 33岁 / 9年品牌市场经验<br>
+      深度参与3个品牌从0到1的品牌资产构建<br>
+      现居深圳 · 寻找愿意一同生长的下一段旅程
+    </div>
+  </div>
+  <div class="hero-scroll">Scroll</div>
+</section>
+
+<!-- ============ Section 2: ABOUT ============ -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-num">01</span>
+      <h2 class="section-title">关于我</h2>
+      <span class="section-title-en">About</span>
+    </div>
+    
+    <div class="about-grid fade-in">
+      <div class="about-image-block">
+        <div class="about-image-main"></div>
+      </div>
+      
+      <div class="about-text">
+        <div class="about-quote">
+          "好的品牌就像一个内心丰富的人——<br>
+          每一次相遇,都能发现新鲜的东西。"
+        </div>
+        
+        <p class="about-paragraph">
+          我做了9年的品牌市场。从广告公司出发,在卡姿兰、WonderLab、moodytiger等品牌走过完整的0-1与1-10阶段。每一次,我都试图让品牌不只是「卖货」,而是成为用户生活中真实存在的一种价值。
+        </p>
+        
+        <p class="about-paragraph">
+          这些经历给了我扎实的能力,也让我越来越清楚自己想做什么、不想做什么。<strong>我不想再做被流量逻辑追着跑的爆款,我想做愿意花十年去回答一个问题的品牌</strong>——比如什么是当代女性的舒适与自由,比如品牌如何陪伴一个人完整的生命阶段。
+        </p>
+        
+        <p class="about-paragraph">
+          我相信,品牌力来自每一个动作的累积——每一次产品定义、每一次内容表达、每一次门店体验,都在塑造用户对品牌的理解。希望加入一个把品牌当作长期事业去经营的团队,用更克制的表达、更有温度的内容、更有耐心的节奏,与品牌一同生长。
+        </p>
+        
+        <div class="about-signature">
+          <span class="about-signature-name">— Chunhua, 2026</span>
+          <span class="about-signature-loc">Shenzhen · China</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Section 3: CAPABILITIES ============ -->
+<section class="capabilities" id="capabilities">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-num">02</span>
+      <h2 class="section-title">能力维度</h2>
+      <span class="section-title-en">What I Do</span>
+    </div>
+    
+    <div class="cap-grid fade-in">
+      <div class="cap-card">
+        <div class="cap-num">i.</div>
+        <h3 class="cap-title">品牌叙事与内容建构</h3>
+        <div class="cap-title-en">Brand Storytelling</div>
+        <p class="cap-desc">
+          擅长从人群洞察出发,提炼品牌主张与文化母题,构建可持续复用的品牌内容资产。代表作品包括moodytiger「还原自然护暖」沉浸式戏剧秀场、WonderLab克莱因蓝品牌视觉体系、卡姿兰口红博物馆等。
+        </p>
+        <div class="cap-evidence">代表作品 · 9 BRAND CAMPAIGNS</div>
+      </div>
+      
+      <div class="cap-card">
+        <div class="cap-num">ii.</div>
+        <h3 class="cap-title">品牌资产体系搭建</h3>
+        <div class="cap-title-en">Brand Asset Building</div>
+        <p class="cap-desc">
+          具备从品牌定位、品牌屋、视觉识别、内容矩阵到零售终端一致性管理的完整能力链条。WonderLab的克莱因蓝品牌视觉体系即由本人负责的brandbook与视觉团队完成搭建,获红点设计奖。
+        </p>
+        <div class="cap-evidence">RED DOT AWARD · 2021</div>
+      </div>
+      
+      <div class="cap-card">
+        <div class="cap-num">iii.</div>
+        <h3 class="cap-title">中产女性人群理解</h3>
+        <div class="cap-title-en">Female Audience Insight</div>
+        <p class="cap-desc">
+          9年里持续观察中国女性的需求变化、生活方式演进与品牌选择心理。在moodytiger负责中产家庭妈妈、在WonderLab负责新锐都市女性、在卡姿兰负责18-30岁女性。对女性人群的差异化分层与情感共鸣点有体感。
+        </p>
+        <div class="cap-evidence">3 BRANDS · 9 YEARS</div>
+      </div>
+      
+      <div class="cap-card">
+        <div class="cap-num">iv.</div>
+        <h3 class="cap-title">跨职能团队管理</h3>
+        <div class="cap-title-en">Team & Operations</div>
+        <p class="cap-desc">
+          曾管理20+人品牌团队,职能覆盖品牌策划、视觉设计、内容创作、媒介投放、零售营销、公关传播等核心模块。熟悉品牌团队的搭建、培训与协同机制,理解从工坊式品牌到系统化运作的转型。
+        </p>
+        <div class="cap-evidence">20+ TEAM · 5 FUNCTIONS</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Section 4: WORKS ============ -->
+<section class="works" id="works">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-num">03</span>
+      <h2 class="section-title">代表作品</h2>
+      <span class="section-title-en">Selected Works</span>
+    </div>
+  </div>
+  
+  <!-- Work 01: moodytiger「还原自然护暖」 (无素材,用文字海报呈现) -->
+  <div class="container">
+    <div class="work-block fade-in">
+      <div class="work-header">
+        <div class="work-meta-left">
+          <span class="work-num">№ 01</span>
+          <img src="images/logo-moodytiger.png" alt="moodytiger" class="work-brand-logo">
+          <span class="work-year">2024 · AUTUMN/WINTER</span>
+        </div>
+        <span class="work-tag">Brand Campaign</span>
+      </div>
+      
+      <h3 class="work-title">还原自然护暖</h3>
+      <div class="work-subtitle">A campaign about returning to natural warmth — and to a child's freedom in winter.</div>
+      
+      <div class="work-placeholder">
+        <div class="work-placeholder-text">
+          以阿尔卑斯山羱羊为文化母题<br>
+          构建产品价值的文化叙事<br>
+          让小朋友秋冬不再被厚重臃肿的衣物束缚
+        </div>
+        <div class="work-placeholder-en">
+          Songs<br>of the<br>Alpine.
+        </div>
+      </div>
+      
+      <div class="work-content" style="margin-top: 64px;">
+        <div class="work-text">
+          <p><strong>项目背景:</strong> 秋冬季是品牌声量与生意双低的淡季。在行业秋冬核心需求是大众羽绒服与冲锋衣、品牌缺乏有竞争力秋冬产品的困境下,我作为项目第一负责人,主导从品牌主张提炼到内容三部曲落地的完整品牌叙事建构。</p>
+          
+          <div class="work-quote-block">
+            "把秋冬外套命名为「暖皮衣」——开创全新的品类沟通故事,讲述一个灵感来源于阿尔卑斯山羱羊的故事。"
+          </div>
+          
+          <p><strong>核心策略:</strong> 基于对中产人群对自然质感与功能科技双重需求的洞察,提炼「还原自然护暖」品牌沟通主张。以阿尔卑斯山羱羊为文化母题——保留羊毛拒水透气亲肤的属性,以人类工艺去掉羊毛刺痒不适与难打理的麻烦——构建产品价值的文化叙事。</p>
+        </div>
+        
+        <div class="work-text">
+          <p><strong>内容三部曲:</strong> 主导内容三部曲落地,层层递进:</p>
+          <p>· 阿尔卑斯山羱羊产品文化故事 + 奚梦瑶代言打开知名度</p>
+          <p>· 品牌音乐剧TVC《音乐之声》 — 以童话感的音乐剧形式传递「让小朋友秋冬不再被厚重臃肿衣物束缚」的设计初衷</p>
+          <p>· 首个沉浸式戏剧秀场 — 以农场森林为舞台、儿童戏剧表演开场,让小朋友自然奔跑跳跃与小动物互动走秀,打破传统走秀范式</p>
+          
+          <p><strong>内部价值共建:</strong> 面对内部对高定价新品的信心不足,主导组织面料专家讲解、用户调研呈现、跨部门多轮沟通,推动内部团队达成一致信念,下单量从2000件提升至2万件。</p>
+        </div>
+      </div>
+      
+      <div class="work-impact">
+        <div class="impact-item">
+          <span class="impact-tag">Search Growth</span>
+          <div class="impact-num">+500%</div>
+          <div class="impact-label">品牌搜索同比增长</div>
+        </div>
+        <div class="impact-item">
+          <span class="impact-tag">Sell-out Rate</span>
+          <div class="impact-num">98%</div>
+          <div class="impact-label">线上线下断码脱销率</div>
+        </div>
+        <div class="impact-item">
+          <span class="impact-tag">Order Confidence</span>
+          <div class="impact-num">10×</div>
+          <div class="impact-label">内部下单量提升倍数</div>
+        </div>
+        <div class="impact-item">
+          <span class="impact-tag">Asset Outcome</span>
+          <div class="impact-num">∞</div>
+          <div class="impact-label">沉淀为可持续复用的品牌内容母体</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container"><div class="work-divider"></div></div>
+  
+  <!-- Work 02: WonderLab × 喜茶 -->
+  <div class="container">
+    <div class="work-block fade-in" style="padding-top: 140px;">
+      <div class="work-header">
+        <div class="work-meta-left">
+          <span class="work-num">№ 02</span>
+          <img src="images/logo-wonderlab.jpg" alt="WonderLab" class="work-brand-logo">
+          <span class="work-year">2020 — 2021</span>
+        </div>
+        <span class="work-tag">Brand Identity</span>
+      </div>
+      
+      <h3 class="work-title">克莱因蓝<br>新消费视觉时代</h3>
+      <div class="work-subtitle">Building a brand identity system that defined a generation of new consumer aesthetics.</div>
+      
+      <div class="work-image-full" style="margin-bottom: 48px;">
+        <img src="images/wl-hero-blue.jpg" alt="WonderLab Klein Blue Visual System">
+      </div>
+      
+      <div class="work-content reverse">
+        <div class="work-image">
+          <div class="work-image-grid cols-2">
+            <img src="images/wl-brandbook.jpg" alt="WonderLab Brand Book">
+            <img src="images/wl-product-flat.jpg" alt="WonderLab Product Design">
+          </div>
+        </div>
+        <div class="work-text">
+          <p><strong>项目角色:</strong> 担任市场部负责人,负责品牌识别体系搭建与品牌人格塑造。从0到1构建品牌的视觉、内容与人格语言。</p>
+          
+          <div class="work-quote-block">
+            "提炼品牌关键词、输出brandbook、统一克莱因蓝主视觉与小胖瓶包装语言,让WonderLab成为可被一眼识别的品牌。"
+          </div>
+          
+          <p><strong>品牌识别体系:</strong> 提炼品牌关键词输出完整brandbook,统一克莱因蓝主视觉与小胖瓶包装语言,建立内部视觉原则与设计标准。WonderLab品牌视觉与设计获红点设计奖,并引领了一轮新消费品牌的视觉设计风潮。</p>
+        </div>
+      </div>
+      
+      <div class="work-image-full" style="margin: 48px 0;">
+        <img src="images/wl-research-lab.jpg" alt="WonderLab Research Studio">
+      </div>
+      
+      <div class="work-content">
+        <div class="work-text">
+          <p><strong>品牌人格塑造:</strong> 基于9095后女性用户的精神特质,通过产品创新、文案叙事、跨界合作等方式持续传递品牌的「前卫、探索、想象力」人格。被第一财经CBNData & 天猫评选为「年度最受女性欢迎瓶装代餐奶昔品牌TOP1」。</p>
+          
+          <p><strong>多元场景叙事:</strong> 构建奶茶代餐、健身补给、加班宵夜、营养早餐、婚前体重管理、产后身材修复等多元女性使用场景,让品牌真正进入用户日常生活。</p>
+          
+          <p><strong>产品即叙事:</strong> 主导喜茶联名整合项目,让产品成为承载品牌故事与社交属性的载体,验证了「产品即营销」的品牌方法论。</p>
+        </div>
+        <div class="work-image">
+          <div class="work-image-grid cols-2">
+            <img src="images/wl-merch.jpg" alt="WonderLab Limited Edition">
+            <img src="images/wl-foodography.jpg" alt="WonderLab Editorial">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Visual Gallery -->
+      <div class="work-image-grid cols-3" style="margin-top: 48px; margin-bottom: 48px;">
+        <img src="images/wl-store-1.jpg" alt="WonderLab Store">
+        <img src="images/wl-store-3.jpg" alt="WonderLab Store">
+        <img src="images/wl-product-yellow.jpg" alt="WonderLab Product">
+      </div>
+      <div class="work-image-grid cols-3" style="margin-bottom: 48px;">
+        <img src="images/wl-blue-shoes.jpg" alt="WonderLab Blue">
+        <img src="images/wl-blue-rose.jpg" alt="WonderLab Blue">
+        <img src="images/wl-blue-phone.jpg" alt="WonderLab Blue">
+      </div>
+      
+      <div class="work-impact">
+        <div class="impact-item">
+          <span class="impact-tag">Award</span>
+          <div class="impact-num">Red Dot</div>
+          <div class="impact-label">红点设计奖<br>品牌视觉与设计</div>
+        </div>
+        <div class="impact-item">
+          <span class="impact-tag">Recognition</span>
+          <div class="impact-num">TOP 1</div>
+          <div class="impact-label">CBNData × 天猫<br>年度最受女性欢迎品牌</div>
+        </div>
+        <div class="impact-item">
+          <span class="impact-tag">Brand Growth</span>
+          <div class="impact-num">+600%</div>
+          <div class="impact-label">品牌搜索与生意额<br>半年内增长</div>
+        </div>
+        <div class="impact-item">
+          <span class="impact-tag">Industry Impact</span>
+          <div class="impact-num">∞</div>
+          <div class="impact-label">引领一轮新消费品牌<br>视觉设计风潮</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container"><div class="work-divider"></div></div>
+  
+  <!-- Work 03: 卡姿兰口红博物馆 -->
+  <div class="container">
+    <div class="work-block fade-in" style="padding-top: 140px;">
+      <div class="work-header">
+        <div class="work-meta-left">
+          <span class="work-num">№ 03</span>
+          <img src="images/logo-carslan.jpg" alt="CARSLAN" class="work-brand-logo">
+          <span class="work-year">2018 — 2019</span>
+        </div>
+        <span class="work-tag">Brand Space & IP</span>
+      </div>
+      
+      <h3 class="work-title">口红博物馆 × 潘通联名</h3>
+      <div class="work-subtitle">When a national beauty brand reinvented itself through space, color, and culture.</div>
+      
+      <div class="work-image-full" style="margin-bottom: 48px;">
+        <img src="images/cs-museum-entrance.jpg" alt="CARSLAN Lipstick Museum">
+      </div>
+      
+      <div class="work-content">
+        <div class="work-text">
+          <p><strong>项目角色:</strong> 担任卡姿兰唇部产品线创意策划主管,负责品牌创意策划与品牌资源整合,推动品牌在年轻消费者心中的形象升级。</p>
+          
+          <div class="work-quote-block">
+            "整合品牌资源落地电商触点,提升品牌形象与情感溢价能力——让国货彩妆,也能讲一个有质感的品牌故事。"
+          </div>
+          
+          <p><strong>口红博物馆:</strong> 主导策划品牌空间项目「口红博物馆」,以艺术展馆形式呈现品牌产品矩阵,让消费者从「购买产品」转向「体验品牌」,提升年轻人群对品牌的好感度与情感连接。</p>
+          
+          <p><strong>潘通联名:</strong> 与国际色彩权威机构潘通(PANTONE)合作,推出色彩主题联名系列,赋予产品色彩故事与时尚话语权。</p>
+        </div>
+        <div class="work-image">
+          <div class="work-image-grid cols-2">
+            <img src="images/cs-david-kv.jpg" alt="CARSLAN David KV">
+            <img src="images/cs-museum-container.jpg" alt="CARSLAN Museum Container">
+          </div>
+        </div>
+      </div>
+      
+      <div class="work-image-full" style="margin: 48px 0;">
+        <img src="images/cs-pantone-space.jpg" alt="CARSLAN × Pantone">
+      </div>
+      
+      <div class="work-content reverse">
+        <div class="work-image">
+          <div class="work-image-grid cols-2">
+            <img src="images/cs-99-stage.jpg" alt="CARSLAN Live">
+            <img src="images/cs-store-pink.jpg" alt="CARSLAN Store">
+          </div>
+        </div>
+        <div class="work-text">
+          <p><strong>整合营销:</strong> 整合乐华七子代言、口红博物馆品牌空间、潘通色彩联名、百所高校校园快闪等品牌资源,落地电商触点提升品牌形象与情感溢价能力。</p>
+          
+          <p><strong>明星同款营销:</strong> 18年主导策划明星同款色号营销,99大促2天售出3万+支,跻身国内百元价位彩妆品牌口红销量TOP1;19年策划李佳琦直播+抖音信息流推广+分众电梯广告投放全案,3天售出8万+支,刷新历史最高销量记录。</p>
+          
+          <p><strong>品牌升级成果:</strong> 助力品牌18-30岁人群比例提升10pct,蝉联国产彩妆品牌市占率第一。</p>
+        </div>
+      </div>
+      
+      <div class="work-image-grid cols-3" style="margin: 48px 0;">
+        <img src="images/cs-museum-hall.jpg" alt="CARSLAN Museum">
+        <img src="images/cs-product-wall.jpg" alt="CARSLAN Product Wall">
+        <img src="images/cs-lips-grid.jpg" alt="CARSLAN Lips Matrix">
+      </div>
+      
+      <div class="work-impact">
+        <div class="impact-item">
+          <span class="impact-tag">Audience Shift</span>
+          <div class="impact-num">+10pct</div>
+          <div class="impact-label">18-30岁人群比例提升</div>
+        </div>
+        <div class="impact-item">
+          <span class="impact-tag">Market Position</span>
+          <div class="impact-num">№1</div>
+          <div class="impact-label">国产彩妆品牌市占率<br>蝉联第一</div>
+        </div>
+        <div class="impact-item">
+          <span class="impact-tag">Brand Resources</span>
+          <div class="impact-num">4</div>
+          <div class="impact-label">明星代言 / 联名空间<br>色彩联名 / 校园快闪</div>
+        </div>
+        <div class="impact-item">
+          <span class="impact-tag">CTR Lift</span>
+          <div class="impact-num">+10pct</div>
+          <div class="impact-label">钻展推广点击率提升</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Section 5: TIMELINE ============ -->
+<section class="timeline-section" id="timeline">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-num">04</span>
+      <h2 class="section-title">职业旅程</h2>
+      <span class="section-title-en">The Journey</span>
+    </div>
+    
+    <div class="timeline fade-in">
+      <div class="timeline-item current">
+        <div class="timeline-date">2023.10 — Present</div>
+        <div class="timeline-company">moodytiger · 慕迪贸易(深圳)有限公司</div>
+        <div class="timeline-role">高级市场经理 / 品牌部负责人 · 深圳</div>
+        <div class="timeline-desc">
+          负责品牌1-10阶段的品牌建设与品牌叙事工作,向CEO汇报。主导品牌升级、秋冬「还原自然护暖」整合营销项目、leggings品类3-5年长期规划等核心项目。
+        </div>
+        <div class="timeline-tags">
+          <span class="timeline-tag">Brand Upgrade</span>
+          <span class="timeline-tag">Campaign Lead</span>
+          <span class="timeline-tag">Category Strategy</span>
+        </div>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="timeline-date">2023.03 — 2023.07</div>
+        <div class="timeline-company">字节跳动 · 抖音电商</div>
+        <div class="timeline-role">策略运营 · 广州</div>
+        <div class="timeline-desc">
+          负责珠宝箱包行业核心品牌的平台营销策略,为头部品牌客户定制品牌创新玩法,落地抖音平台首个AI互动品牌传播项目。
+        </div>
+        <div class="timeline-tags">
+          <span class="timeline-tag">Platform Strategy</span>
+          <span class="timeline-tag">AI × Brand</span>
+        </div>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="timeline-date">2022.01 — 2022.07</div>
+        <div class="timeline-company">moodytiger · 慕迪贸易(深圳)有限公司</div>
+        <div class="timeline-role">品牌市场部负责人 / 高级市场经理 · 深圳</div>
+        <div class="timeline-desc">
+          担任品牌市场部一号位,负责公司1-10阶段的品牌从0到1塑造与品类发展,管理15人跨职能团队。提出「重新定义儿童运动舒适」品牌沟通策略,半年内品牌搜索同比增长500%。
+        </div>
+        <div class="timeline-tags">
+          <span class="timeline-tag">0-to-1 Branding</span>
+          <span class="timeline-tag">Team Lead 15</span>
+          <span class="timeline-tag">Mid-tier Audience</span>
+        </div>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="timeline-date">2020.01 — 2021.05</div>
+        <div class="timeline-company">WonderLab · 深圳精准健康食物科技</div>
+        <div class="timeline-role">市场营销部负责人 / 高级营销经理 · 深圳</div>
+        <div class="timeline-desc">
+          前期担任品类营销负责人,后晋升为市场部负责人,管理11人团队。负责品牌识别体系搭建与品牌人格塑造,主导喜茶联名等整合项目,品牌视觉获红点设计奖。
+        </div>
+        <div class="timeline-tags">
+          <span class="timeline-tag">Brand Identity</span>
+          <span class="timeline-tag">Red Dot Award</span>
+          <span class="timeline-tag">Team Lead 11</span>
+        </div>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="timeline-date">2018.03 — 2019.12</div>
+        <div class="timeline-company">CARSLAN · 卡姿兰(广州)化妆品有限公司</div>
+        <div class="timeline-role">电商市场部 · 创意策划主管 · 广州</div>
+        <div class="timeline-desc">
+          负责唇部产品线的品牌创意策划与电商市场内容,主导口红博物馆品牌空间、潘通联名、明星代言整合等项目,助力品牌18-30岁人群比例提升10pct。
+        </div>
+        <div class="timeline-tags">
+          <span class="timeline-tag">Brand Space</span>
+          <span class="timeline-tag">IP Collab</span>
+        </div>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="timeline-date">2016.02 — 2018.03</div>
+        <div class="timeline-company">广州市原象广告有限公司</div>
+        <div class="timeline-role">数字营销部 · 客户执行 / 文案策划 · 广州</div>
+        <div class="timeline-desc">
+          广告公司AE兼文案策划,服务宝洁、雀巢、腾讯、华为荣耀等品牌客户。独立负责潘婷、飘柔、海飞丝品牌的新媒体0到1搭建与品牌内容运营。
+        </div>
+        <div class="timeline-tags">
+          <span class="timeline-tag">Agency Foundation</span>
+          <span class="timeline-tag">Copywriting</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Section 6: AWARDS ============ -->
+<section class="awards">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-num">05</span>
+      <h2 class="section-title">作品与荣誉</h2>
+      <span class="section-title-en">Recognition</span>
+    </div>
+    
+    <div class="awards-grid fade-in">
+      <div class="award-card">
+        <div class="award-year">2021</div>
+        <div class="award-title">Red Dot Award<br>红点设计奖</div>
+        <div class="award-org">WonderLab 克莱因蓝品牌视觉体系 / Brand Visual System</div>
+      </div>
+      <div class="award-card">
+        <div class="award-year">2020</div>
+        <div class="award-title">年度最受女性欢迎<br>瓶装代餐奶昔品牌 TOP 1</div>
+        <div class="award-org">第一财经 CBNData × 天猫 / Industry Recognition</div>
+      </div>
+      <div class="award-card">
+        <div class="award-year">2024</div>
+        <div class="award-title">音乐之声品牌音乐剧 TVC<br>The Sound of Music</div>
+        <div class="award-org">moodytiger · 原创品牌内容作品</div>
+      </div>
+      <div class="award-card">
+        <div class="award-year">2024</div>
+        <div class="award-title">秋冬沉浸式戏剧秀场<br>Immersive Theater Show</div>
+        <div class="award-org">moodytiger · 原创品牌秀场形式</div>
+      </div>
+      <div class="award-card">
+        <div class="award-year">2018-19</div>
+        <div class="award-title">CARSLAN × Pantone<br>口红博物馆 Lipstick Museum</div>
+        <div class="award-org">卡姿兰 · 品牌跨界与品牌空间项目</div>
+      </div>
+      <div class="award-card">
+        <div class="award-year">Ongoing</div>
+        <div class="award-title">3 Brand Identity Systems<br>3 套品牌识别体系</div>
+        <div class="award-org">From 0 to 1 / 9 Years of Building</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Section 7: PHILOSOPHY ============ -->
+<section class="philosophy">
+  <div class="container-narrow">
+    <div class="section-header fade-in">
+      <span class="section-num">06</span>
+      <h2 class="section-title">关于品牌的思考</h2>
+      <span class="section-title-en">My Belief</span>
+    </div>
+    
+    <div class="philosophy-content fade-in">
+      <div class="philosophy-mark">"</div>
+      
+      <p class="philosophy-text">
+        经过9年实践,我越来越相信:品牌的长期价值不在于一次声量的高峰,而在于能否沉淀出经得起时间考验的资产——<strong>清晰的人群理解、有生命力的内容母体、可被感知的产品哲学。</strong>
+      </p>
+      
+      <p class="philosophy-text">
+        我个人长期关注东方美学、独立设计师品牌与生活方式品牌,欣赏那些愿意用十年时间做一件事的品牌团队。希望参与到那些以更长视角经营品牌的项目中——用更克制的表达、更打动人的叙事、更有耐心的节奏,与品牌一同生长。
+      </p>
+      
+      <div class="philosophy-divider"></div>
+      
+      <p class="philosophy-en">
+        I believe brand value comes not from the height of a single peak,<br>
+        but from the patient accumulation of every act —<br>
+        every product defined, every word written, every moment shared.<br>
+        <em>Brand is what time builds.</em>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Section 8: CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-num">07</span>
+      <h2 class="section-title" style="color: #FAF7F2;">建立连接</h2>
+      <span class="section-title-en">Get in Touch</span>
+    </div>
+    
+    <div class="contact-grid fade-in">
+      <div>
+        <h3 class="contact-headline">
+          如果你也相信<br>
+          品牌是一段长途的旅程,<br>
+          我希望与你同行。
+        </h3>
+        <div class="contact-headline-en">
+          If you believe in branding as a long journey,<br>I'd love to walk with you.
+        </div>
+      </div>
+      
+      <div class="contact-info">
+        <div class="contact-item">
+          <span class="contact-label">Email</span>
+          <div class="contact-value"><a href="mailto:janelch@163.com">janelch@163.com</a></div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">Phone / WeChat</span>
+          <div class="contact-value">+86 137 2672 6564</div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">Location</span>
+          <div class="contact-value">Shenzhen, China</div>
+        </div>
+        <div class="contact-item" style="border-bottom: none;">
+          <span class="contact-label">Status</span>
+          <div class="contact-value">在职 / 寻找下一段旅程</div>
+        </div>
+        
+        <a href="mailto:janelch@163.com" class="contact-cta">
+          Write to me →
+        </a>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <div>© 2026 LIANG CHUNHUA · Personal Brand Site</div>
+      <div>Designed with Care · Built to Last</div>
+    </div>
+  </div>
+</section>
+
+<script>
+// Navigation scroll effect
+const nav = document.getElementById('nav');
+let lastScroll = 0;
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY;
+  if (scrolled > 100) {
+    nav.classList.add('scrolled');
+    nav.style.background = 'rgba(250, 247, 242, 0.95)';
+    nav.style.backdropFilter = 'blur(12px)';
+    nav.style.borderBottom = '1px solid rgba(212, 201, 176, 0.3)';
+  } else {
+    nav.classList.remove('scrolled');
+    nav.style.background = 'transparent';
+    nav.style.backdropFilter = 'none';
+    nav.style.borderBottom = 'none';
+  }
+});
+
+// Fade-in animations on scroll
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -80px 0px'
+};
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, observerOptions);
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// Smooth scroll for nav links
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>
+
+</body>
+</html>
